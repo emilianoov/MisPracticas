@@ -39,6 +39,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php }else if ($this->session->userdata('rol') == 2){?>
             <?php }?>
             <li><a href="#">Page 2</a></li>
+            <li><a href="<?php echo base_url('Welcome/listar')?>">Usuarios</a></li>
+                    <li><a href="<?php echo base_url('Welcome/index')?>">Insertar Regsitro</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span

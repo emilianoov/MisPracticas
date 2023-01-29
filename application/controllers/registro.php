@@ -32,6 +32,7 @@ class registro extends CI_Controller {
 			'amaterno' => strtoupper(trim($this->input->post('amaterno'))),
 			'correo' => trim($this->input->post('email')),
 			'contrasenia' => password_hash(trim($this->input->post('pwd')), PASSWORD_DEFAULT),
+			'foto' => $this->input->post('file'),
 			'rol' => intval ($roles));
 			
 			

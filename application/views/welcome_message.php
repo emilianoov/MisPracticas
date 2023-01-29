@@ -1,4 +1,3 @@
-
 <div class="container">
     <?php  if($this->session->flashdata('success')){?>
     <div class="alert alert-success">
@@ -27,11 +26,16 @@
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" name="email">
         </div>
+
         <div class="form-group">
             <label for="pwd">Password:</label>
             <input type="password" class="form-control" id="pwd" name="pwd">
         </div>
-
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="file" id="file" name="file" accept="image/png, image/jpeg">
+            </div>
+        </div>
         <button type="submit" class="btn btn-success">Guardar</button>
     </form>
 </div>

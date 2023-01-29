@@ -6,7 +6,7 @@
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Apellido Paterno</th>
-                <th>Apellido Materno</th>
+                <th>Foto</th>
                 <th>Correo</th>
                 <th>
                     <center>Acciones</center>
@@ -21,7 +21,7 @@
                 <td><?php echo $row['id_preregistro']; ?></td>
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['apaterno']; ?></td>
-                <td><?php echo $row['amaterno']; ?></td>
+                <td><img height="50px"src="data:image/jpg:base64",<?php echo base64_encode($row['foto']); ?>/></td>
                 <td><?php echo $row['correo']; ?></td>
                 <td>
                     <div class="dropdown">
