@@ -21,7 +21,7 @@
                 <td><?php echo $row['id_preregistro']; ?></td>
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['apaterno']; ?></td>
-                <td><img height="50px"src="data:image/jpg:base64",<?php echo base64_encode($row['foto']); ?>/></td>
+                <td><img height="50px" src="../uploads/<?php echo $row['foto']; ?>"></td>
                 <td><?php echo $row['correo']; ?></td>
                 <td>
                     <div class="dropdown">

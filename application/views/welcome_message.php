@@ -8,7 +8,7 @@
     <?php }?>
 
     <h2>Registro de Participante </h2>
-    <form action="<?php echo base_url('registro/registrar') ?>" method="post">
+    <form action="<?php echo base_url('registro/registrar') ?>" method="post" enctype="multipart/form-data">
         <div class="form-group">
 
             <label for="nombre">Nombre:</label>
