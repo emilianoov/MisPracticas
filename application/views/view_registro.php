@@ -21,7 +21,7 @@
                 <td><?php echo $row['id_preregistro']; ?></td>
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['apaterno']; ?></td>
-                <td><img height="50px" src="../uploads/<?php echo $row['foto']; ?>"></td>
+                <td><img height="50px" src="../uploads/<?php echo $row['foto']; ?>"></td> <!-- AQUI MANDAS A TRAER A TU CARPETA CREADA-->
                 <td><?php echo $row['correo']; ?></td>
                 <td>
                     <div class="dropdown">
@@ -32,7 +32,7 @@
                             class="glyphicon glyphicon-pencil"></span>editar</a></li>
                             <li><a href="<?php echo base_url('welcome/eliminar').'/'.$row['id_preregistro']; ?>"><span
                             class="glyphicon glyphicon-erase"></span>eliminar</a></li>
-                            
+
                         </ul>
                     </div>
                 </td>

@@ -26,15 +26,16 @@ class registro extends CI_Controller {
 		}else{
 			$roles=2;
 		}
-
-		$config['upload_path']          = './uploads/';
+		// ES IMPORTANTE QUE CREES OTRO CAMPO EN TU BDD DE TIPO VARCHAR
+		// TODOD ESTO ES DE CODEGNITER
+		$config['upload_path']          = './uploads/'; //CREAS UNA CARPETA CON EL NOMBRE UPLOADS
 		$config['allowed_types']        = 'gif|jpg|png';
 		$config['max_size']             = 100;
 		$config['max_width']            = 1024;
 		$config['max_height']           = 768;
 		$this->load->library('upload', $config);
 
-		if ( ! $this->upload->do_upload('file'))
+		if ( ! $this->upload->do_upload('file')) //AQUIE EN 'FILE' ES EL NAME DE TU INPUT
     	{
             $error = array('error' => $this->upload->display_errors());
 
@@ -56,7 +57,7 @@ class registro extends CI_Controller {
 			'amaterno' => strtoupper(trim($this->input->post('amaterno'))),
 			'correo' => trim($this->input->post('email')),
 			'contrasenia' => password_hash(trim($this->input->post('pwd')), PASSWORD_DEFAULT),
-			'foto' => $file_name,
+			'foto' => $file_name, //MANDAS A LLAMAR EL METODO QUE CREASTE EN EL IF
 			'rol' => intval ($roles));
 			
 			
